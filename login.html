@@ -1,0 +1,43 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+  <div class="bg-white shadow-lg p-8 rounded w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-4 text-center">Login to MyShop</h2>
+
+    <!-- Email/Password Form -->
+    <form id="login-form" class="space-y-4">
+      <input id="email" type="email" placeholder="Email" class="w-full p-2 border rounded" required>
+      <input id="password" type="password" placeholder="Password" class="w-full p-2 border rounded" required>
+      <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Login</button>
+    </form>
+
+    <p class="text-center my-4 text-sm text-gray-500">OR</p>
+
+    <!-- Google Sign-In -->
+    <button id="google-login" class="w-full bg-red-500 text-white p-2 rounded hover:bg-red-600">
+      Sign in with Google
+    </button>
+  </div>
+
+  <!-- Firebase Config -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Email/
