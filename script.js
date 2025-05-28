@@ -1,7 +1,7 @@
 // script.js
 
 const products = [
-  { id: 1, name: "T-Shirt", price: 499, image: "/img/1.jpeg"  },
+  { id: 1, name: "T-Shirt", price: 499, image: "img/1.jpeg"  },
   { id: 2, name: "Shoes", price: 1299, image: "/img/2.jpeg" },
   { id: 3, name: "Backpack", price: 899, image: "/img/3.jpeg" },
   { id: 4, name: "Watch", price: 1999, image: "/img/4.jpeg" },
